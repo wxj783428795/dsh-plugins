@@ -11,9 +11,9 @@
 
 ## 效果预览
 
-### 黑洞主题与原生深色设置页
+### 黑洞主题效果
 
-![黑洞主题与原生深色设置页](../docs/theme-settings-audit/05-black-hole-dark-palette.png)
+![无遮挡的黑洞主题新会话页面](./assets/black-hole-hero.png)
 
 ### 原生外观选择器集成
 

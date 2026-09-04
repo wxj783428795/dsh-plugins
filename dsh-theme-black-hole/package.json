@@ -25,7 +25,8 @@
     "lib/client.js.map",
     "cordis.patch.yml",
     "README.md",
-    "screenshots.json"
+    "screenshots.json",
+    "assets/black-hole-hero.png"
   ],
   "dsh": {
     "bundle": {
@@ -46,6 +47,7 @@
   },
   "scripts": {
     "build": "node build.mjs",
+    "capture:readme": "playwright test scripts/capture-readme-screenshots.spec.ts --reporter=line --workers=1",
     "check": "tsc --noEmit",
     "test": "vitest run tests",
     "test:perf": "playwright test scripts/sidebar-perf.spec.ts --reporter=line --workers=1",

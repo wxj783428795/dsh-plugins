@@ -8,7 +8,7 @@
 
 基于 DSH Dark 模式的可切换 WebGPU 动态黑洞主题。
 
-![黑洞主题与原生深色设置页](./docs/theme-settings-audit/05-black-hole-dark-palette.png)
+![无遮挡的黑洞主题新会话页面](./dsh-theme-black-hole/assets/black-hole-hero.png)
 
 ## 开发
 
