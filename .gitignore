@@ -1,0 +1,7 @@
+node_modules/
+.artifacts/
+coverage/
+test-results/
+playwright-report/
+.DS_Store
+*.tgz

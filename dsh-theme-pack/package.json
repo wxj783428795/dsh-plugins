@@ -1,0 +1,72 @@
+{
+  "name": "@wxj783428795/dsh-theme-pack",
+  "version": "0.1.0",
+  "description": "Switchable DeepSeek Harness Web themes, including a dark WebGPU black-hole theme",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/client.js.map",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-settings-general",
+        "@deepseek-ai/dsh-client-ui-theme"
+      ],
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "tsc --noEmit",
+    "test": "vitest run tests",
+    "test:perf": "playwright test scripts/sidebar-perf.spec.ts --reporter=line --workers=1",
+    "verify": "pnpm check && pnpm test && pnpm build",
+    "prepack": "node build.mjs"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "theme",
+    "webgpu",
+    "black-hole"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.0.2",
+    "@deepseek-ai/dsh-client-store": "0.1.2-rc.1",
+    "@deepseek-ai/dsh-client-ui-settings": "0.1.2-rc.1",
+    "@deepseek-ai/dsh-settings": "0.1.2-rc.1",
+    "@deepseek-ai/schemastery": "3.18.2",
+    "@playwright/test": "^1.62.1",
+    "@types/react": "~18.3.1",
+    "@vgpu/wgsl": "0.3.1",
+    "esbuild": "^0.28.2",
+    "jsdom": "^29.0.0",
+    "react": "^18.2.0",
+    "typescript": "~6.0.2",
+    "vgpu": "0.3.1",
+    "vitest": "^4.1.8"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  }
+}
