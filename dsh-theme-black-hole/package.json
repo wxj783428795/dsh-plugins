@@ -2,6 +2,15 @@
   "name": "@wxj783428795/dsh-theme-black-hole",
   "version": "0.1.0",
   "description": "A switchable WebGPU Black Hole theme derived from DeepSeek Harness Dark mode",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wxj783428795/dsh-plugins.git",
+    "directory": "dsh-theme-black-hole"
+  },
+  "homepage": "https://github.com/wxj783428795/dsh-plugins/tree/main/dsh-theme-black-hole",
+  "bugs": {
+    "url": "https://github.com/wxj783428795/dsh-plugins/issues"
+  },
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -15,7 +24,8 @@
     "lib/client.js",
     "lib/client.js.map",
     "cordis.patch.yml",
-    "README.md"
+    "README.md",
+    "screenshots.json"
   ],
   "dsh": {
     "bundle": {
