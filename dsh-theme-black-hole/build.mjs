@@ -2,7 +2,7 @@ import { readFile } from 'node:fs/promises'
 import { build } from 'esbuild'
 import { transformWgsl } from '@vgpu/wgsl/loader-vite'
 
-const packageId = '@wxj783428795/dsh-theme-pack'
+const packageId = '@wxj783428795/dsh-theme-black-hole'
 
 const wgslPlugin = {
   name: 'vgpu-wgsl',
@@ -32,7 +32,7 @@ await build({
 })
 
 const banner = [
-  '/** Generated browser bundle for @wxj783428795/dsh-theme-pack. */',
+  '/** Generated browser bundle for @wxj783428795/dsh-theme-black-hole. */',
   'window.__ModuleLoader__.load({',
   `  id: ${JSON.stringify(packageId)},`,
   '  factory: (require) => {',
@@ -61,6 +61,7 @@ await build({
     'react',
     'react/jsx-runtime',
     '@deepseek-ai/dsh-client-store',
+    '@deepseek-ai/dsh-client-ui-primitives',
   ],
   plugins: [wgslPlugin],
   banner: { js: banner },
@@ -69,4 +70,3 @@ await build({
   minify: true,
   legalComments: 'eof',
 })
-

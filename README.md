@@ -4,7 +4,7 @@
 
 ## 插件
 
-- [`dsh-theme-pack`](./dsh-theme-pack/)：可切换的 DSH Web 主题包，首个主题为基于 Dark 模式的动态黑洞主题。
+- [`dsh-theme-black-hole`](./dsh-theme-black-hole/)：基于 DSH Dark 模式的可切换动态黑洞主题。
 
 ## 开发
 

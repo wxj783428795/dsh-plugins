@@ -786,19 +786,22 @@ defineMethod("transform", [
   "preserve"
 ], ({ inner }, isInner) => inner.toString(isInner));
 
-// src/theme-settings.ts
+// src/black-hole-settings.ts
 var BLACK_HOLE_THEME_ID = "wxj-black-hole";
-var THEME_PACK_SETTINGS_NAMESPACE = "wxj-theme-pack";
-var THEME_PACK_THEME_FIELD = "theme";
-var THEME_PACK_THEME_IDS = ["dark", BLACK_HOLE_THEME_ID];
-var ThemePackSettingsSchema = Schema.object({
-  [THEME_PACK_THEME_FIELD]: Schema.union([...THEME_PACK_THEME_IDS]).default("dark")
+var BLACK_HOLE_SETTINGS_NAMESPACE = "wxj-theme-black-hole";
+var BLACK_HOLE_SETTINGS_THEME_FIELD = "theme";
+var BLACK_HOLE_SETTINGS_THEME_IDS = ["off", "dark", BLACK_HOLE_THEME_ID];
+var BlackHoleThemeSettingsSchema = Schema.object({
+  // Keep the former `dark` value readable so existing installations migrate
+  // without rejecting their profile. Both `off` and legacy `dark` mean that
+  // the built-in Appearance preference owns the selection.
+  [BLACK_HOLE_SETTINGS_THEME_FIELD]: Schema.union([...BLACK_HOLE_SETTINGS_THEME_IDS]).default("off")
 });
 
 // src/index.ts
 function apply(ctx) {
   ctx.inject(["settings"], (settingsCtx) => {
-    settingsCtx.settings.register(THEME_PACK_SETTINGS_NAMESPACE, ThemePackSettingsSchema);
+    settingsCtx.settings.register(BLACK_HOLE_SETTINGS_NAMESPACE, BlackHoleThemeSettingsSchema);
   });
 }
 export {

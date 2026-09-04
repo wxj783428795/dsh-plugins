@@ -1,7 +1,7 @@
 {
-  "name": "@wxj783428795/dsh-theme-pack",
+  "name": "@wxj783428795/dsh-theme-black-hole",
   "version": "0.1.0",
-  "description": "Switchable DeepSeek Harness Web themes, including a dark WebGPU black-hole theme",
+  "description": "A switchable WebGPU Black Hole theme derived from DeepSeek Harness Dark mode",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -25,6 +25,7 @@
       "inject": [
         "@deepseek-ai/dsh-client-locale",
         "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-primitives",
         "@deepseek-ai/dsh-client-ui-settings",
         "@deepseek-ai/dsh-client-ui-settings-general",
         "@deepseek-ai/dsh-client-ui-theme"
@@ -53,6 +54,7 @@
   "devDependencies": {
     "@deepseek-ai/cordis": "4.0.2",
     "@deepseek-ai/dsh-client-store": "0.1.2-rc.1",
+    "@deepseek-ai/dsh-client-ui-primitives": "0.1.2-rc.1",
     "@deepseek-ai/dsh-client-ui-settings": "0.1.2-rc.1",
     "@deepseek-ai/dsh-settings": "0.1.2-rc.1",
     "@deepseek-ai/schemastery": "3.18.2",
