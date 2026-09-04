@@ -4,7 +4,11 @@
 
 ## 插件
 
-- [`dsh-theme-black-hole`](./dsh-theme-black-hole/)：基于 DSH Dark 模式的可切换动态黑洞主题。
+### [`dsh-theme-black-hole`](./dsh-theme-black-hole/)
+
+基于 DSH Dark 模式的可切换 WebGPU 动态黑洞主题。
+
+![黑洞主题与原生深色设置页](./docs/theme-settings-audit/05-black-hole-dark-palette.png)
 
 ## 开发
 
