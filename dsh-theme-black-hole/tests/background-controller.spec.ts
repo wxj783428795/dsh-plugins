@@ -87,7 +87,7 @@ describe('BlackHoleBackgroundController', () => {
     controller.dispose()
   })
 
-  it('keeps the static fallback when reduced motion is requested', async () => {
+  it('keeps a static dark layer when reduced motion is requested', async () => {
     installMedia(true, true)
     Object.defineProperty(window.navigator, 'gpu', { configurable: true, value: {} })
     document.body.innerHTML = '<div data-slot="conversation"><main data-phase="hero"></main></div>'
@@ -103,4 +103,3 @@ describe('BlackHoleBackgroundController', () => {
     controller.dispose()
   })
 })
-
